@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+@@include('html/head.html',{
+"title":"Тестовое задание для Employcity"
+})
+
+<body>
+  @@include('html/header.html',{})
+  <main>
+    <section class="promo">
+      <div class="promo__wrap wrap">
+        <h1 class="promo__title"><span class="promo__title--blue">Lorem ipsum</span> dolor sit amet
+          consectetur<span class="promo__title--blue"> adipiscing</span> </h1>
+        <h2 class="promo__caption">At vero eos et accusamus et iusto odio dignissimos ducimus!</h2>
+        <ul class="promo__list">
+          <li class="promo__item">Totam rem aperiam eaque ipsa</li>
+          <li class="promo__item">Sit voluptatem accusantium doloremque laudantium</li>
+          <li class="promo__item">Sed ut perspiciatis, unde omnis iste natus error</li>
+        </ul>
+        <div class="promo__wrap-button">
+          <button class="promo__button promo__button--blue">заказать</button>
+          <button class="promo__button">подробнее</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="ordering">
+      <div class="ordering__wrap wrap">
+        <h2 class="ordering__title">Оформление<span class="ordering__title--blue"> заказа</span></h2>
+        <p class="ordering__text">Перед заполнением формы ознакомьтесь с нашей схемой работы!</p>
+
+        <ul class="procedure procedure__list ordering__procedure">
+          <li class="procedure__item">
+            <p class="procedure__text">Lorem ipsum dolorsit amet</p>
+            <svg class="procedure__img procedure__img--search">
+              <use xlink:href="img/icons/icons.svg#search"></use>
+            </svg>
+          </li>
+          <li class="procedure__item">
+            <p class="procedure__text">Сonsecteturadipiscing elit</p>
+            <svg class="procedure__img procedure__img--percent">
+              <use xlink:href="img/icons/icons.svg#percent"></use>
+            </svg>
+          </li>
+          <li class="procedure__item">
+            <p class="procedure__text">Sed do eiusmod tempor</p>
+            <svg class="procedure__img procedure__img--text">
+              <use xlink:href="img/icons/icons.svg#text"></use>
+            </svg>
+          </li>
+          <li class="procedure__item">
+            <p class="procedure__text">Esse cillum doloreeu</p>
+            <svg class="procedure__img procedure__img--letter">
+              <use xlink:href="img/icons/icons.svg#letter"></use>
+            </svg>
+          </li>
+          <li class="procedure__item">
+            <p class="procedure__text">Excepteur sint occaecat cupidatat non proident</p>
+            <svg class="procedure__img procedure__img--dollar">
+              <use xlink:href="img/icons/icons.svg#dollar"></use>
+            </svg>
+          </li>
+        </ul>
+
+        <form action="/" enctype="multipart/form-data" method="post" name="order" class="form ordering__form">
+          <div class="form__wrap">
+            <div class="form__dropdown dropdown">
+              <div class="form__wrap-input dropdown__wrap-input">
+                <input type="text" id="sistem" name="sistem" value=""
+                  class="form__input form__input--dropdown dropdown__input" placeholder="Выберете тип системы">
+              </div>
+              <div class="dropdown__wrap">
+                <ul class="dropdown__list">
+                  <li class="dropdown__item dropdown__item--activ">Walking in Old Tallinn</li>
+                  <li class="dropdown__item">St. Isaac's Cathedral</li>
+                  <li class="dropdown__item">The Bridge of Peace</li>
+                  <li class="dropdown__item">El Caminito del Rey</li>
+                  <li class="dropdown__item">St. Isaac's Cathedral</li>
+                  <li class="dropdown__item">The Bridge of Peace</li>
+                  <li class="dropdown__item">El Caminito del Rey</li>
+                  <li class="dropdown__item">St. Isaac's Cathedral</li>
+                  <li class="dropdown__item">The Bridge of Peace</li>
+                  <li class="dropdown__item">El Caminito del Rey</li>
+                </ul>
+              </div>
+            </div>
+            <div class="form__wrap-input">
+              <input class="form__input" type="email" name="email" id="email" required placeholder="Ваш e-mail">
+            </div>
+            <div class="form__wrap-input">
+              <input class="form__input" type="text" name="name" id="name" required placeholder="Ваше имя">
+            </div>
+
+            <div class="form__wrap-input form__wrap-input--range range">
+              <div class="range__wrap">
+                <label for="range" class="range__label">Sed ut perspiciatis, unde omnis iste natus</label>
+                <span class="range__text">75</span><span class="range__text">%</span>
+              </div>
+              <input class="range__input" min="1" max="100" value="75" type="range" name="range" id="range">
+            </div>
+
+            <div class="form__wrap-input form__wrap-input--file">
+              <label for="file" class="form__input form__input--file">
+                <input class="visually-hidden" type="file" name="file" id="file">
+                <span class="form__label-text">Прикрепить файл</span>
+              </label>
+            </div>
+          </div>
+          <button class="form__button" type="submit">Отправить</button>
+
+        </form>
+      </div>
+    </section>
+
+  </main>
+
+  @@include('html/footer.html',{})
+  <script src="js/app.min.js"></script>
+</body>
+
+</html>

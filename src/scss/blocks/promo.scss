@@ -1,0 +1,155 @@
+.promo {
+  background: url(../img/promo.webp);
+  background-size: cover;
+  background-position-x: -800px;
+  background-repeat: no-repeat;
+
+  @media (min-width: 400px) {
+    background-position-x: -600px;
+  }
+
+  @media (min-width: 500px) {
+    background-position-x: -400px;
+  }
+
+  @media (min-width: 700px) {
+    background-position-x: -200px;
+  }
+
+  @media (min-width: $md) {
+    background-position-x: center;
+  }
+}
+.promo__wrap {
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 50px;
+  padding-bottom: 100px;
+
+  font-family: Lato;
+  color: $black;
+
+  @media (min-width: $md) {
+    padding-top: 70px;
+  }
+
+  @media (min-width: $lg) {
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 100px;
+    padding-bottom: 150px;
+  }
+}
+
+.promo__title {
+  margin: 0;
+  margin-bottom: 40px;
+  text-transform: uppercase;
+  font-weight: 700;
+  @include font(24px, 40px);
+
+  &--blue {
+    color: $blue-common;
+  }
+
+  @media (min-width: $md) {
+    margin-bottom: 60px;
+    font-size: 28px;
+  }
+
+  @media (min-width: $lg) {
+    font-size: 48px;
+    line-height: 58px;
+    width: 780px;
+    margin-bottom: 80px;
+  }
+}
+
+.promo__caption {
+  font-weight: 700;
+  @include font(16px, 20px);
+  margin-bottom: 10px;
+
+  @media (min-width: $lg) {
+    font-size: 20px;
+    line-height: 24px;
+  }
+}
+
+.promo__list {
+  @include list-reset();
+  margin-bottom: 40px;
+
+  @media (min-width: $md) {
+    margin-bottom: 60px;
+  }
+
+  @media (min-width: $lg) {
+    margin-bottom: 80px;
+  }
+}
+
+.promo__item {
+  position: relative;
+  margin-bottom: 5px;
+  padding-left: 20px;
+  font-weight: 400;
+
+  &::before {
+    position: absolute;
+    content: "";
+    height: 2px;
+    width: 5px;
+    left: 5px;
+    top: 10px;
+
+    background-color: $black;
+  }
+}
+
+.promo__wrap-button {
+  width: 185px;
+  margin: 0 auto;
+
+  @media (min-width: $md) {
+    width: auto;
+    display: flex;
+  }
+}
+
+.promo__button {
+  @include button();
+  width: 185px;
+  text-transform: uppercase;
+  font-weight: 400;
+  @include font(13px, 16px);
+  padding-top: 15px;
+  padding-bottom: 10px;
+  padding-left: 30px;
+  padding-right: 30px;
+  color: #2a2b30;
+  border: 1px solid #6f6d7b;
+  border-radius: 4px;
+  background-color: #fff;
+
+  &:hover {
+    background-color: #2a2b30;
+    color: $white;
+  }
+
+  &--blue {
+    color: $white;
+    background-color: $blue-common;
+    margin-bottom: 15px;
+    border-color: $white;
+
+    @media (min-width: $md) {
+      margin-right: 30px;
+      margin-bottom: 0;
+
+      &:hover {
+        background-color: $hover-button;
+      }
+    }
+  }
+}

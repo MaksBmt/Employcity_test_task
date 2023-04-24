@@ -1,0 +1,142 @@
+.procedure__list {
+  @include list-reset();
+
+  @media (min-width: $md) {
+    display: flex;
+    flex-wrap: wrap;
+    width: 540px;
+    margin: 0 auto;
+  }
+
+  @media (min-width: $lg) {
+    width: 100%;
+    justify-content: space-between;
+  }
+}
+
+.procedure__item {
+  padding-top: 125px;
+  position: relative;
+  width: 190px;
+  margin: 0 auto;
+  margin-bottom: 30px;
+  text-align: center;
+  color: $white;
+
+  &::before {
+    position: absolute;
+    content: "";
+    width: 100px;
+    height: 100px;
+    top: 0;
+    left: 50%;
+    transform: translatex(-50%);
+    border-radius: 50%;
+    border: 5px solid $blue-border;
+    background-color: $blue-common;
+
+    @media (min-width: $lg) {
+      box-sizing: border-box;
+    }
+  }
+
+  @media (min-width: $md) {
+    width: 50%;
+
+    &:nth-child(even) {
+      &::after {
+        position: absolute;
+        content: "";
+        width: 120px;
+        height: 6px;
+        top: 50px;
+        left: -50px;
+        background: url(../img/dots.svg);
+        background-repeat: no-repeat;
+      }
+    }
+  }
+
+  @media (min-width: $lg) {
+    width: 190px;
+    margin-left: 0;
+    margin-right: 0;
+
+    &:nth-child(even) {
+      &::after {
+        content: none;
+      }
+    }
+
+    &:nth-child(n + 1) {
+      &::after {
+        position: absolute;
+        content: "";
+        width: 120px;
+        height: 6px;
+        top: 50px;
+        left: -80px;
+        background: url(../img/dots.svg);
+        background-repeat: no-repeat;
+      }
+    }
+
+    &:nth-child(1) {
+      &::after {
+        content: none;
+      }
+    }
+  }
+}
+
+.procedure__text {
+  margin: 0;
+}
+
+.procedure__img {
+  position: absolute;
+  width: 34px;
+  height: 34px;
+  left: 50%;
+  transform: translateX(-50%);
+
+  fill: $white;
+
+  &--search {
+    top: 38px;
+
+    @media (min-width: $lg) {
+      top: 35px;
+    }
+  }
+
+  &--percent {
+    top: 35px;
+  }
+
+  &--text {
+    top: 28px;
+    width: 42px;
+    height: 48px;
+
+    @media (min-width: $lg) {
+      top: 25px;
+    }
+  }
+
+  &--letter {
+    top: 40px;
+    width: 36px;
+    height: 28px;
+  }
+
+  &--dollar {
+    top: 40px;
+    width: 45px;
+    height: 32px;
+
+    @media (min-width: $lg) {
+      top: 35px;
+    }
+  }
+}

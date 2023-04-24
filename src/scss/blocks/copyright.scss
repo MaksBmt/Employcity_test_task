@@ -1,0 +1,46 @@
+.copyright {
+  display: flex;
+  width: 280px;
+  margin: 0 auto;
+
+  font-family: Lato;
+  font-weight: 400;
+  @include font(11px, 16px);
+  color: $white;
+  align-items: center;
+
+  span {
+    padding-right: 3px;
+  }
+
+  @media (min-width: $lg) {
+    width: auto;
+    margin: 0;
+    font-size: 13px;
+  }
+}
+
+.copyright__logo {
+  text-transform: uppercase;
+  font-size: 11px;
+
+  @media (min-width: $lg) {
+    font-size: 13px;
+  }
+}
+
+.copyright__date {
+  font-size: 11px;
+
+  @media (min-width: $lg) {
+    font-size: 13px;
+  }
+}
+
+.copyright__text {
+  font-size: 12px;
+
+  @media (min-width: $lg) {
+    font-size: 13px;
+  }
+}
